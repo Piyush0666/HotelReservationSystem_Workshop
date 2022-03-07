@@ -11,4 +11,13 @@ class hotelReservationMainTest
     {
         assertTrue( true );
     }
+    @Test
+    public void givenHotelDetails_WhenSizeMatches_ShouldReturnTrue()
+    {
+        hotelReservationIF hotelReservation = new HotelReservation();
+        hotelReservation.addHotel();
+        int hotelListSize = hotelReservation.getHotelListSize();
+        System.out.println("" +hotelListSize);
+        assertEquals(0, hotelListSize);
+    }
 }
