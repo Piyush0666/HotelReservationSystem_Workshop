@@ -31,6 +31,7 @@ class hotelReservationMainTest
         int weekDayRate = (int) hotelReservation.getHotelList().get(0).getWeekDayRate();
         assertEquals(150, weekDayRate);
     }
+
     @Test
     public void givenHotelList_WhenAdded_shouldReturnWeekendRate(){
         hotelReservationIF hotelReservation = new HotelReservation();
@@ -38,6 +39,7 @@ class hotelReservationMainTest
         int weekendRate = (int) hotelReservation.getHotelList().get(0).getWeekendRate();
         assertEquals(150, weekendRate);
     }
+
     @Test
     public void givenHotelDetails_WhenSizeMatches_ShoulReturnTrue()
     {
@@ -48,6 +50,7 @@ class hotelReservationMainTest
         int hotelListSize = hotelReservation.getHotelListSize();
         assertEquals(3, hotelListSize);
     }
+
     @Test
     public void givenHotelDetails_shouldReturnCheapestHotel(){
 
@@ -59,4 +62,5 @@ class hotelReservationMainTest
         String hotelName = hotelReservation.getCheapestHotel(startDate, endDate);
         assertEquals("Lakewood", hotelName);
     }
+
 }
